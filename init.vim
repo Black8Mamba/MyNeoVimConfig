@@ -97,22 +97,13 @@ endif
 " =======================
 call plug#begin('~/.config/nvim/plugged')
 
-    " file explorer
     Plug 'preservim/nerdtree'
     Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
     Plug 'Xuyuanp/nerdtree-git-plugin'
-
-    " highlight
-    "Plug 'cateduo/vsdark.nvim'
     Plug 'jackguo380/vim-lsp-cxx-highlight'
-    "Plug 'crusoexia/vim-monokai'
-
     Plug 'easymotion/vim-easymotion'
-    "ale
     Plug 'dense-analysis/ale'
-    " lsp
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    "vim-airline
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'jiangmiao/auto-pairs'
@@ -120,20 +111,15 @@ call plug#begin('~/.config/nvim/plugged')
     Plug '907th/vim-auto-save'
     Plug 'brooth/far.vim'
     Plug 'mbbill/undotree'
-
     Plug 'skywind3000/vim-preview'
-
     "Plug 'connorholyday/vim-snazzy'
     Plug 'Yggdroot/indentLine'
-
     Plug 'preservim/tagbar'
-
     Plug 'mhinz/vim-startify'
     Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
     Plug 'skywind3000/vim-terminal-help'
     "Plug 'flaz/vim-colorschemes'
     Plug 'junegunn/fzf'
-    " Git
     Plug 'rhysd/conflict-marker.vim'
     Plug 'tpope/vim-fugitive'
     Plug 'mhinz/vim-signify'
@@ -145,6 +131,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'tpope/vim-surround'
     Plug 'machakann/vim-highlightedyank'
+    Plug 'voldikss/vim-floaterm'
 call plug#end()
 let g:rainbow_active = 1
 let g:rainbow_conf = {
@@ -251,8 +238,11 @@ let GtagsCscope_Quiet = 1
 
 "undotree
 nnoremap <LEADER>q :UndotreeToggle<CR>
-
-" ===
+"vim-floaterm
+nnoremap <LEADER>tt :FloatermToggle<CR>
+let g:floaterm_width = 0.9
+let g:floaterm_height = 0.9
+"" ===
 " === ale
 " ===
 let b:ale_linters = ['pylint']
